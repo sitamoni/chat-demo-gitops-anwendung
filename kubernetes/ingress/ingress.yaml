@@ -5,7 +5,7 @@ metadata:
   name: demo-ingress
   namespace: techcast-demo
   annotations:
-    cert-manager.io/cluster-issuer: letsencrypt-prod
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
 spec:
   ingressClassName: nginx
   tls:
