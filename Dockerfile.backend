@@ -1,0 +1,13 @@
+FROM node:alpine
+
+WORKDIR /app
+
+COPY ./tech-demo-app/backend/package*.json ./
+
+RUN npm install
+
+COPY ./tech-demo-app/backend/ .
+
+EXPOSE 3000
+
+CMD ["node", "index.js"]
