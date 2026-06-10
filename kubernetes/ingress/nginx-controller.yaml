@@ -21,6 +21,7 @@ spec:
         kind: HelmRepository
         name: ingress-nginx
   interval: 5m
+  prune: true
   install:
     createNamespace: true
   values:
@@ -35,3 +36,4 @@ spec:
         use-proxy-protocol: "true"
         use-forwarded-headers: "true"
         compute-full-forwarded-for: "true"
+      replicaCount: 2
