@@ -24,4 +24,5 @@ spec:
   install:
     createNamespace: true
   values:
-    installCRDs: true
+    crds:
+      enabled: true
