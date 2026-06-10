@@ -1,0 +1,26 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+  namespace: techcast-demo
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+        - name: backend
+          image: ghcr.io/sitamoni/chat-backend:v1
+          env:
+            - name: REDIS_URL
+              value: redis://redis:6379
+          resources:
+          ports:
+            - name: http
+              containerPort: 3000
