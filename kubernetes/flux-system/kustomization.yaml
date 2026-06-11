@@ -3,3 +3,8 @@ kind: Kustomization
 resources:
 - gotk-components.yaml
 - gotk-sync.yaml
+## die neuen pipelines für die einzelnen Bereiche
+- namespaces-source.yaml
+- infrastructure-source.yaml
+- cluster-issuer-source.yaml
+- apps-source.yaml

@@ -5,7 +5,7 @@ metadata:
   namespace: flux-system
 spec:
   dependsOn:
-    - name: cluster-issuer  #
+    - name: cluster-issuer
   interval: 10m
   path: ./kubernetes/apps
   prune: true
