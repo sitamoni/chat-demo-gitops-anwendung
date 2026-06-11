@@ -7,7 +7,7 @@ spec:
   dependsOn:
     - name: infrastructure #
   interval: 10m
-  path: ./kubernetes/infrastructure/issuer # Pfad zu deiner ClusterIssuer-YAML
+  path: ./kubernetes/cluster-issuers
   prune: true
   sourceRef:
     kind: GitRepository

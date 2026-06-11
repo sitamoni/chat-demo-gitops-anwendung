@@ -13,7 +13,7 @@ spec:
         kind: HelmRepository
         name: jetstack
         namespace: flux-system
-      interval: 12h
+      interval: 30m
   install:
     createNamespace: true
     remediation:
@@ -23,7 +23,5 @@ spec:
     crds: CreateReplace
   targetNamespace: cert-manager
   values:
-    crds:
-      enabled: true
-      keep: true
+    installCRDs: true
     replicaCount: 2
