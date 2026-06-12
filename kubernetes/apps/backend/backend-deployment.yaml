@@ -20,7 +20,6 @@ spec:
           env:
             - name: REDIS_URL
               value: redis://redis:6379
-          resources:
           ports:
             - name: http
               containerPort: 3000
