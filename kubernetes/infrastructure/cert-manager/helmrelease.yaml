@@ -25,3 +25,26 @@ spec:
   values:
     installCRDs: true
     replicaCount: 2
+    resources:
+      requests:
+        cpu: "50m"
+        memory: "64Mi"
+      limits:
+        cpu: "200m"
+        memory: "128Mi"
+    webhook:
+      resources:
+        requests:
+          cpu: "10m"
+          memory: "40Mi"
+        limits:
+          cpu: "60m"
+          memory: "64Mi"
+    cainjector:
+      resources:
+        requests:
+          cpu: "10m"
+          memory: "40Mi"
+        limits:
+          cpu: "60m"
+          memory: "64Mi"
